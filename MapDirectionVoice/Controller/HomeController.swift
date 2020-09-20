@@ -184,8 +184,7 @@ class HomeController: UIViewController {
     }
     fileprivate func setupViews() {
         view.backgroundColor = .systemBackground
-        
-        stack(.vertical, spacing: 30)(
+        stack(.vertical)(
             directionLabel.insetting(by: 16),
             stack(.horizontal, spacing: 16)(
                 textField,
