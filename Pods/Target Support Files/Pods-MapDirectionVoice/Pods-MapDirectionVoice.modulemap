@@ -1,0 +1,6 @@
+framework module Pods_MapDirectionVoice {
+  umbrella header "Pods-MapDirectionVoice-umbrella.h"
+
+  export *
+  module * { export * }
+}
