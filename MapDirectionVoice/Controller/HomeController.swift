@@ -26,6 +26,7 @@ class HomeController: UIViewController {
     private let backButton: UIButton = {
         let button = UIButton(type: .system)
         button.setImage(#imageLiteral(resourceName: "baseline_arrow_back_black_36dp").withRenderingMode(.alwaysOriginal), for: .normal)
+        button.tintColor = .systemGreen
         button.addTarget(self, action: #selector(actionBtnPressed), for: .touchUpInside)
         return button
     }()
@@ -49,6 +50,7 @@ class HomeController: UIViewController {
     lazy var directionLabel: UILabel = {
         let label = UILabel()
         label.text = "Where do you want to go?"
+        label.textColor = .systemGreen
         label.font = .boldSystemFont(ofSize: 16)
         label.textAlignment = .center
         label.numberOfLines = 0
@@ -65,7 +67,7 @@ class HomeController: UIViewController {
     lazy var getDirectionButton: UIButton = {
         let button = UIButton()
         button.setTitle("Get Direction", for: .normal)
-        button.setTitleColor(.systemBlue, for: .normal)
+        button.setTitleColor(.systemGreen, for: .normal)
         button.titleLabel?.font = .boldSystemFont(ofSize: 16)
         button.addTarget(self, action: #selector(getDirectionButtonTapped), for: .touchUpInside)
         return button
@@ -74,7 +76,7 @@ class HomeController: UIViewController {
     lazy var startStopButton: UIButton = {
         let button = UIButton()
         button.setTitle("Start Navigation", for: .normal)
-        button.setTitleColor(.systemBlue, for: .normal)
+        button.setTitleColor(.systemGreen, for: .normal)
         button.titleLabel?.font = .boldSystemFont(ofSize: 16)
         button.addTarget(self, action: #selector(startStopButtonTapped), for: .touchUpInside)
         return button
@@ -333,7 +335,7 @@ extension HomeController : CLLocationManagerDelegate{
 extension HomeController : MKMapViewDelegate{
     func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
         let renderer = MKPolylineRenderer(overlay: overlay)
-        renderer.strokeColor = .systemBlue
+        renderer.strokeColor = .systemGreen
         return renderer
     }
 }
