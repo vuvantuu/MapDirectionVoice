@@ -182,6 +182,10 @@ class HomeController: UIViewController {
             print("Error Sign Out")
         }
     }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: animated)
+    }
     fileprivate func setupViews() {
         view.backgroundColor = .systemBackground
         stack(.vertical)(
